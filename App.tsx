@@ -12,7 +12,7 @@ SplashScreen.preventAutoHideAsync();
 export default function App() {
 
     const [fontsLoaded] = useFonts({
-        'Space Grotesk': require('./assets/fonts/SpaceGrotesk-VariableFont_wght.ttf')
+        'Space Grotesk': require('./assets/fonts/SpaceGrotesk.ttf')
     })
 
     const onLayoutRootView = useCallback(async () => {
