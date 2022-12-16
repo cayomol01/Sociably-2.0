@@ -1,27 +1,27 @@
 import React, {useState} from 'react';
-import {StyleSheet, Text, View, TextInput, Image} from 'react-native';
+import {StyleSheet, Text, View, TextInput} from 'react-native';
 import Estilos from "../constants/Styles";
 import Colors from "../constants/Colors";
 import SociablyButton from "../components/SociablyButton";
 
 
-export default function InterestsScreen({navigation}) {
+export default function PasswordEntry({navigation}) {
 
     const usuario = {
        usuario:"hola",
-       contra: "adios" 
+       contra: "adios"
     }
     const [password, setPassword] = useState(null)
 
     function handleClick(){
-        if(password==usuario.contra){
+        if(password===usuario.contra){
             alert('contraseña correcta')
         }
         else{
             alert('contraseña incorrecta')
         }
     }
-   
+
 
     return (
         <View style={styles.container}>
@@ -38,15 +38,15 @@ export default function InterestsScreen({navigation}) {
                 style={{ padding: 10,width: '90%',borderBottomWidth: 2, borderBottomColor: Colors.palette.primary, marginBottom: 20}}>
 
             </TextInput>
-        
+
             <View style={{alignItems:'center',width:'100%'}}>
                 <View style = {{...styles.container,width: '90%', height: 'auto', marginBottom: 20}}>
                     <Text style={{...Estilos.Subtitle, fontSize: '0.9'}}>
-                        By continuing, you agree to Sociably's 
-                        <Text style={{fontWeight:'bold'}}> Terms of Service</Text> and confirm that you have read Sociably's 
+                        By continuing, you agree to Sociably's
+                        <Text style={{fontWeight:'bold'}}> Terms of Service</Text> and confirm that you have read Sociably's
                         <Text style = {{fontWeight: 'bold'}}> Privacy Policy</Text>
                     </Text>
-                </View>    
+                </View>
                 <SociablyButton buttonType={'darkButton'} text={"Next"} style={{padding: 10, fontSize: 10, backgroundColor: Colors.palette.primary}} onPress={handleClick}/>
             </View>
         </View>
@@ -64,9 +64,9 @@ const styles = StyleSheet.create({
     header:{
         backgroundColor: "#ebebeb",
         width: '100%',
-        height: 'auto', 
+        height: 'auto',
         alignItems: 'center',
-        paddingVertical: '10px', 
+        paddingVertical: '10px',
         marginBottom: 40
     },
 
