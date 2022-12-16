@@ -1,5 +1,7 @@
 import Colors from './Colors';
 
+const mainFont = 'Space Grotesk'
+
 const button = {
     width: '90%',
     height: '6vh',
@@ -9,7 +11,7 @@ const button = {
 }
 
 const buttonText = {
-    fontFamily: 'Space Grotesk', fontSize: 26
+    fontFamily: mainFont, fontSize: 26
 }
 
 export default {
@@ -33,12 +35,12 @@ export default {
         }
     },
     Title:{
-        fontFamily: 'Space Grotesk',
+        fontFamily: mainFont,
         fontSize: "2rem",
         fontWeight: "Bold"
     },
     Subtitle:{
-        fontFamily:'Space Grotesk',
+        fontFamily: mainFont,
         fontSize: "1rem",
         fontWeight: "Normal"
     }
