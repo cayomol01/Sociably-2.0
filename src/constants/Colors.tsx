@@ -1,7 +1,7 @@
 
-const color1 = '#FF826C';
-const color2 = '#C15548';
-const color3 = '#5796FF';
+const color1 = '#C15548';
+const color2 = '#FF826C';
+const color3 = '#7940ff';
 
 export default {
 
