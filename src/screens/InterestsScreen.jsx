@@ -56,8 +56,8 @@ export default function InterestsScreen({navigation}) {
                 ))}
             </View>
             <View style={{alignItems:'center',justifyContent:'center',width:'100%'}}>
-                <SociablyButton buttonType={'lightButton'} text={"Skip"} onPress={()=>{console.log("Skiping")}}/>
-                <SociablyButton buttonType={'darkButton'} text={"Next"} onPress={()=>{getTags()}}/>
+                <SociablyButton buttonType={'darkButton'} text={"Skip"} onPress={()=>{console.log("Skiping")}}/>
+                <SociablyButton buttonType={'lightButton'} text={"Next"} onPress={()=>{getTags()}}/>
             </View>
         </View>
     );
