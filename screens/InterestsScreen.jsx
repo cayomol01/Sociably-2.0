@@ -52,7 +52,7 @@ export default function InterestsScreen({navigation}) {
             <Text style={{...Estilos.Subtitle, marginBottom: 40}}> Personalize your feed </Text>
             <View style={styles.flex}>
                 {interests.map((x) => (
-                    <InterestButton text={x}/>
+                    <InterestButton key={x} text={x}/>
                 ))}
             </View>
             <View style={{alignItems:'center',justifyContent:'center',width:'100%'}}>
