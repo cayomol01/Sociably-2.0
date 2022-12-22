@@ -18,16 +18,16 @@ export default {
     lightButton: {
         ...button,
         backgroundColor: 'white',
-        borderColor: Colors.palette.secondary,
+        borderColor: Colors.palette.primary,
         borderWidth: 2.7,
         text: {
             ...buttonText,
-            color: Colors.palette.secondary
+            color: Colors.palette.primary
         }
     },
     darkButton: {
         ...button,
-        backgroundColor: Colors.palette.secondary,
+        backgroundColor: Colors.palette.primary,
         borderWidth: 0,
         text: {
             ...buttonText,

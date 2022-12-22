@@ -18,8 +18,9 @@ export default function NavigationIndex() {
 function Root(){
     return (
         <Stack.Navigator screenOptions={{headerShown:false}}>
-            <Stack.Screen name={"PasswordEntry"} component={PasswordEntry} />
             <Stack.Screen name={"Interests"} component={InterestsScreen} />
+            <Stack.Screen name={"PasswordEntry"} component={PasswordEntry} />
+
         </Stack.Navigator>
     )
 }

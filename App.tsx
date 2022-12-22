@@ -5,14 +5,14 @@ import * as SplashScreen from 'expo-splash-screen';
 import { useFonts } from 'expo-font';
 import { useCallback } from "react";
 
-import NavigationIndex from './navigation/navigationIndex'
+import NavigationIndex from './src/navigation/navigationIndex'
 
 SplashScreen.preventAutoHideAsync();
 
 export default function App() {
 
     const [fontsLoaded] = useFonts({
-        'Space Grotesk': require('./assets/fonts/SpaceGrotesk.ttf')
+        'Space Grotesk': require('./src/assets/fonts/SpaceGrotesk.ttf')
     })
 
     const onLayoutRootView = useCallback(async () => {

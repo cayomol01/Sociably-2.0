@@ -52,12 +52,12 @@ export default function InterestsScreen({navigation}) {
             <Text style={{...Estilos.Subtitle, marginBottom: 40}}> Personalize your feed </Text>
             <View style={styles.flex}>
                 {interests.map((x) => (
-                    <InterestButton text={x}/>
+                    <InterestButton key={x} text={x}/>
                 ))}
             </View>
             <View style={{alignItems:'center',justifyContent:'center',width:'100%'}}>
-                <SociablyButton buttonType={'lightButton'} text={"Skip"} onPress={()=>{console.log("Skiping")}}/>
-                <SociablyButton buttonType={'darkButton'} text={"Next"} onPress={()=>{getTags()}}/>
+                <SociablyButton buttonType={'darkButton'} text={"Skip"} onPress={()=>{console.log("Skiping")}}/>
+                <SociablyButton buttonType={'lightButton'} text={"Next"} onPress={()=>{getTags()}}/>
             </View>
         </View>
     );
