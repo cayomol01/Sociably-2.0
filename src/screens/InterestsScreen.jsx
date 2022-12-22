@@ -20,8 +20,8 @@ export default function InterestsScreen({navigation}) {
             setTags(temp)
         }
         return (
-            <TouchableOpacity style={{...styles.interest,...toggle ? {borderColor: Colors.palette.primary}:{}}}>
-                <Text style={{...styles.interestText,...toggle ? {color:Colors.palette.primary}:{}}} onPress={()=>{toggleFunction()}}>
+            <TouchableOpacity style={{...styles.interest,...toggle ? {borderColor: Colors.palette.secondary}:{}}}>
+                <Text style={{...styles.interestText,...toggle ? {color:Colors.palette.secondary}:{}}} onPress={()=>{toggleFunction()}}>
                     {texto}
                 </Text>
             </TouchableOpacity>
@@ -29,13 +29,15 @@ export default function InterestsScreen({navigation}) {
     }
 
     function getTags(){
+        let meme;
+        let index;
         let temp = tags
-        let meme
         let res = []
         while (temp.length > 0){
             meme = temp.pop()
-            if (temp.indexOf(meme) >= 0){
-                temp.splice(temp.indexOf(meme),1)
+            index = temp.indexOf(meme)
+            if (index >= 0){
+                temp.splice(index,1)
             } else {
                 res.push(meme)
             }
@@ -56,14 +58,15 @@ export default function InterestsScreen({navigation}) {
                 ))}
             </View>
             <View style={{alignItems:'center',justifyContent:'center',width:'100%'}}>
-                <SociablyButton buttonType={'darkButton'} text={"Skip"} onPress={()=>{console.log("Skiping")}}/>
-                <SociablyButton buttonType={'lightButton'} text={"Next"} onPress={()=>{getTags()}}/>
+                <SociablyButton buttonType={'lightButton'} text={"Skip"} onPress={()=>{console.log("Skiping")}}/>
+                <SociablyButton buttonType={'darkButton'} text={"Next"} onPress={()=>{getTags()}}/>
             </View>
         </View>
     );
 }
 
 const styles = StyleSheet.create({
+
     container: {
         flex: 1,
         backgroundColor: '#fff',
@@ -74,20 +77,22 @@ const styles = StyleSheet.create({
     interest: {
         backgroundColor: '#fff',
         borderWidth: 1.5,
-        borderColor: Colors.palette.secondary,
+        borderColor: Colors.palette.primary,
         borderRadius: 10,
         alignItems: 'center',
         justifyContent: 'center'
     },
+
     interestText:{
         fontSize: 21,
         fontFamily: "Space Grotesk",
-        color: Colors.palette.secondary,
+        color: Colors.palette.primary,
         paddingTop: 3,
         paddingBottom: 3,
         paddingLeft: 5,
         paddingRight: 5,
     },
+
     flex:{
         display: "flex",
         flexDirection: "row",
